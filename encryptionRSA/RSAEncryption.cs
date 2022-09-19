@@ -116,7 +116,6 @@ namespace encryption
             BigInteger r = eulerFunction;
             BigInteger newr = publicExponent;
 
-            // алгоритм стырен, но не понят
             while(newr != 0)
             {
                 BigInteger quotient = r / newr;

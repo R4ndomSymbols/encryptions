@@ -42,8 +42,8 @@ namespace encryption
 
         public override void Introduce()
         {
-            while (true)
-            {
+            //while (true)
+            //{
                 Console.Clear();
                 Console.Write("Введите текст: ");
                 text = ReadText();
@@ -61,11 +61,11 @@ namespace encryption
                     {
                         case ConsoleKey.D1:
                         case ConsoleKey.NumPad1:
-                            Console.WriteLine("\r\nРезультат шифрования"+ Encrypt(text));
+                            Console.WriteLine("\r\nРезультат шифрования: "+ Encrypt(text));
                             break;
                         case ConsoleKey.D2:
                         case ConsoleKey.NumPad2:
-                            Console.WriteLine("\r\nРезультат дешифрования" + Decrypt(text));
+                            Console.WriteLine("\r\nРезультат дешифрования: " + Decrypt(text));
                             break;
                         case ConsoleKey.Escape:
                             return;
@@ -75,7 +75,7 @@ namespace encryption
                 {
                     Console.WriteLine("\r\nВы ввели некорректный ключ!");
                 }
-            }
+            //}
 
             string ReadText()
             {
@@ -85,8 +85,6 @@ namespace encryption
             {
                 return !string.IsNullOrWhiteSpace(key) && key.All(symbol => alf.Contains(symbol));
             }
-
-
         }
     }
 }
